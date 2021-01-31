@@ -10,20 +10,16 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import com.test.webservice.soap.models.EmployeeEntity;
 import com.test.webservice.soap.repository.EmployeeRepository;
 
-import io.spring.guides.gs_producing_web_service.SaveEmployeeRequest;
-import io.spring.guides.gs_producing_web_service.SaveEmployeeResponse;
+import practica_web_service_soap.SaveEmployeeRequest;
+import practica_web_service_soap.SaveEmployeeResponse;
 
 @Endpoint
 @Transactional
 public class EmployeeEndpoint {
-	private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
-
-	private EmployeeRepository employeeRepository;
+	private static final String NAMESPACE_URI = "http://practica-web-service-soap";
 
 	@Autowired
-	public EmployeeEndpoint(EmployeeRepository employeeRepository) {
-		this.employeeRepository = employeeRepository;
-	}
+	private EmployeeRepository employeeRepository;
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "saveEmployeeRequest")
 	@ResponsePayload
@@ -36,7 +32,7 @@ public class EmployeeEndpoint {
 				request.getEmployee().getPosition(), Double.parseDouble(request.getEmployee().getSalary()));
 
 		try {
-			employeeRepository.save(employee);
+			this.employeeRepository.save(employee);
 			response.setResponse("Ejecucion Exitosa");
 		} catch (Exception e) {
 			response.setResponse("Ejecucion Fallida");
