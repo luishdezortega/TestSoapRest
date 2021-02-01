@@ -1,0 +1,19 @@
+<soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:saveEmployeeRequest>
+            <gs:employee>
+                <gs:name>Luis Carlos</gs:name>
+                <gs:lastName>Hernandez</gs:lastName>
+                <gs:typeId>CC</gs:typeId>
+                <gs:numId>13078697456</gs:numId>
+                <gs:birthDate>29-Mar-2000</gs:birthDate>
+                <gs:bondingDate>15-Mar-2020</gs:bondingDate>
+                <gs:position>Desarrollador</gs:position>
+                <gs:salary>16273.0</gs:salary>
+            </gs:employee>
+        </gs:saveEmployeeRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

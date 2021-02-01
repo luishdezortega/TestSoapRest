@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://practica-web-service-soap"
+           targetNamespace="http://practica-web-service-soap"
+           elementFormDefault="qualified">
+
+    <xs:element name="saveEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:employee"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="saveEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="employee">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="typeId" type="xs:string"/>
+            <xs:element name="numId" type="xs:string"/>
+            <xs:element name="birthDate" type="xs:string"/>
+            <xs:element name="bondingDate" type="xs:string"/>
+            <xs:element name="position" type="xs:string"/>
+            <xs:element name="salary" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
