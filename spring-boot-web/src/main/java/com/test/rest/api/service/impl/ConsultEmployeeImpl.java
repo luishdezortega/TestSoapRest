@@ -1,8 +1,8 @@
 package com.test.rest.api.service.impl;
 
-import com.test.rest.api.EmployeeClient;
 import com.test.rest.api.domain.EmployeeDTO;
 import com.test.rest.api.exception.EmployeeException;
+import com.test.rest.api.service.EmployeeClient;
 import com.test.rest.api.wsdl.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

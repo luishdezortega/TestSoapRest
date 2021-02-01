@@ -1,4 +1,4 @@
-package com.test.rest.api;
+package com.test.rest.api.service;
 
 import com.test.rest.api.wsdl.Employee;
 import com.test.rest.api.wsdl.SaveEmployeeRequest;
@@ -10,11 +10,10 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 public class EmployeeClient extends WebServiceGatewaySupport {
 
 
-    public EmployeeClient() {
-    }
-
     String urlSoap = "http://localhost:8080/ws/employee";
     String callBack = "http://practica-web-service-soap/SaveEmployeeRequest";
+    public EmployeeClient() {
+    }
 
     public SaveEmployeeResponse saveEmployee(Employee employee) {
         SaveEmployeeRequest request = new SaveEmployeeRequest();

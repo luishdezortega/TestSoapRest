@@ -1,6 +1,6 @@
 package com.test.rest.api.domain;
 
-public class EmployeeDTO  {
+public class EmployeeDTO {
 
     private int bondingTimeMonths;
 

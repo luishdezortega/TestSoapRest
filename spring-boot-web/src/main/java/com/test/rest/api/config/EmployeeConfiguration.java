@@ -1,6 +1,6 @@
 package com.test.rest.api.config;
 
-import com.test.rest.api.EmployeeClient;
+import com.test.rest.api.service.EmployeeClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;

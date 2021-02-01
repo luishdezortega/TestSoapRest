@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.producingwebservice;
+package com.practica.springboot.app;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
